@@ -1,0 +1,56 @@
+<import src="../common/head.wxml" />
+<import src="../common/foot.wxml" />
+
+<view class="container">
+  <template is="head"/>
+
+<form catchsubmit="formSubmit" catchreset="formReset">
+  <view class="page-body">
+    <!-- <image src="/images/logo1.jpeg" class="in-image"></image> -->
+    <view class="page-section">
+      <view class="weui-cells__title">原始价格</view>
+      <view class="weui-cells weui-cells_after-title">
+        <view class="weui-cell weui-cell_input">
+          <input class="weui-input" type="digit" name="original_price" placeholder="9999.00" />
+        </view>
+      </view>
+    </view>
+    <view class="page-section">
+      <view class="weui-cells__title">分期期数（月）</view>
+      <view class="weui-cells weui-cells_after-title">
+        <view class="weui-cell weui-cell_input">
+          <input class="weui-input" type="number" name="number_of_months" placeholder="24" />
+        </view>
+      </view>
+    </view>
+    <view class="page-section">
+      <view class="weui-cells__title">年化利率</view>
+      <view class="weui-cells weui-cells_after-title">
+        <view class="weui-cell weui-cell_input">
+          <view class="weui-cell__bd">
+            <input class="weui-input" type="number" name="annual_rate" placeholder="0.05" />
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="page-section">
+      <view class="weui-cells__title">折算现价</view>
+      <view class="weui-cells weui-cells_after-title">
+        <view class="weui-cell weui-cell_input">
+          <view class="weui-cell__bd">
+            <text class="weui-input"> {{output}} </text>
+          </view>
+        </view>
+      </view>
+    </view>
+
+    <view class="btn-area">
+      <button type="primary" formType="submit">Submit</button>
+      <button formType="reset">Reset</button>
+    </view>
+
+  </view>
+</form>
+
+  <template is="foot" />
+</view>
